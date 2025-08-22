@@ -1,0 +1,64 @@
+
+<?xml version="1.0"?>
+
+<!--This starts the DTD. The first four lines address document structure
+
+-->
+
+
+
+
+<!DOCTYPE list [
+
+   <!ELEMENT Knowledge (#PCDATA|Categorie+)*>
+
+   <!ELEMENT Categorie (#PCDATA|Skill+)*>
+
+   <!ELEMENT Skill (Name, Lvl_base?, Lvl_bonus?, Description, Restriction?, Bonus)>
+
+   <!ELEMENT Bonus (Type,Base_bonus, alt_bonus)*>
+
+   <!--The remaining element of the Skill tag -->
+
+   <!ELEMENT Lvl_bonus (#PCDATA)>
+   <!ELEMENT Lvl_base (#PCDATA)>
+   <!ELEMENT Description (#PCDATA)>
+   <!ELEMENT Restriction (#PCDATA)>
+   <!ELEMENT Name (#PCDATA)>
+   
+   <!--The remaining element of the bonus tag -->
+
+   <!ELEMENT Type (#PCDATA)>
+   <!ELEMENT Base_bonus (#PCDATA)>
+   <!ELEMENT alt_bonus (#PCDATA)>
+  
+   
+]>
+
+<list>
+  <Knowlege>Skills
+    <Categorie>Pilot
+      <Skill>Skill 1 
+        <Description>bla bla bla bla bla bla bla</Description>
+        <Lvl_base>34</Lvl_base>
+        <Lvl_bonus>5</Lvl_bonus>
+        <Bonus>attribute
+          <Type>pe</Type>
+          <Base_bonus>2</Base_bonus>
+        </Bonus>
+        <Bonus>Skill3
+          <Type>Skill</Type>
+          <Base_bonus>10</Base_bonus>
+          <alt_bonus>34</alt_bonus>
+        </Bonus>
+        <Restriction>Skill 2</Restriction>
+      </Skill>
+    </Categorie>
+  </Knowlege>
+</list>
+
+
+
+
+
+

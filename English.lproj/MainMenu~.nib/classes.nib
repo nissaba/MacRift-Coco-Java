@@ -1,0 +1,170 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                CloseAllWindow = id; 
+                CloseWindow = id; 
+                OpenPCWindow = id; 
+                OpenPsyWindow = id; 
+                OpenSkillWindow = id; 
+                OpenSpellWindow = id; 
+            }; 
+            CLASS = FileMenuAndler; 
+            LANGUAGE = Java; 
+            OUTLETS = {
+                PCWindow = id; 
+                PsyWindow = id; 
+                SkillWindow = id; 
+                SkillWindowH = id; 
+                SpellWindow = id; 
+            }; 
+            SUPERCLASS = "java.lang.Object"; 
+        }, 
+        {
+            ACTIONS = {OpenFile = id; Read = id; }; 
+            CLASS = FileReder; 
+            LANGUAGE = Java; 
+            OUTLETS = {inFile = id; reader = id; }; 
+            SUPERCLASS = "java.lang.Object"; 
+        }, 
+        {
+            ACTIONS = {OpenFile = id; WriteFile = id; }; 
+            CLASS = FileWriter; 
+            LANGUAGE = Java; 
+            OUTLETS = {outFile = id; writer = id; }; 
+            SUPERCLASS = "java.lang.Object"; 
+        }, 
+        {
+            ACTIONS = {delegate = id; showHelp = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                getCategorie = id; 
+                getDescription = id; 
+                getName = id; 
+                setCategorie = id; 
+                setDescription = id; 
+                setName = id; 
+            }; 
+            CLASS = Knowledge; 
+            LANGUAGE = Java; 
+            OUTLETS = {Categorie = id; Description = id; Name = id; }; 
+            SUPERCLASS = "java.lang.Object"; 
+        }, 
+        {
+            ACTIONS = {getSkillCategories = id; getSkillList = id; }; 
+            CLASS = KnowledgeHandler; 
+            LANGUAGE = Java; 
+            SUPERCLASS = "java.lang.Object"; 
+        }, 
+        {
+            CLASS = PCClass; 
+            LANGUAGE = Java; 
+            OUTLETS = {
+                iq = id; 
+                ma = id; 
+                me = id; 
+                name = id; 
+                occ = id; 
+                pb = id; 
+                pe = id; 
+                playerName = id; 
+                pp = id; 
+                ps = id; 
+                rcc = id; 
+                spd = id; 
+            }; 
+            SUPERCLASS = "java.lang.Object"; 
+        }, 
+        {CLASS = PCFileReader; LANGUAGE = Java; SUPERCLASS = FileReder; }, 
+        {CLASS = PCFileWriter; LANGUAGE = Java; SUPERCLASS = FileWriter; }, 
+        {
+            ACTIONS = {OpenPCWizWindow = id; TestNext = id; }; 
+            CLASS = PCHandlerClass; 
+            LANGUAGE = Java; 
+            OUTLETS = {PCWizWindow = id; progress = id; progressText = id; tempInt = id; }; 
+            SUPERCLASS = "java.lang.Object"; 
+        }, 
+        {CLASS = PsyFileReader; LANGUAGE = Java; SUPERCLASS = FileReder; }, 
+        {CLASS = PsyFileWriter; LANGUAGE = Java; SUPERCLASS = FileWriter; }, 
+        {
+            ACTIONS = {
+                getLeveRule = id; 
+                getRequirement = id; 
+                getRules = id; 
+                setLevelRule = id; 
+                setRequirement = id; 
+                setRules = id; 
+            }; 
+            CLASS = SkillClass; 
+            LANGUAGE = Java; 
+            OUTLETS = {LevelRule = id; Requirement = id; Rules = id; }; 
+            SUPERCLASS = Knowledge; 
+        }, 
+        {
+            ACTIONS = {SkillFileReader = id; makeSkillList = id; }; 
+            CLASS = SkillFileReader; 
+            LANGUAGE = Java; 
+            OUTLETS = {skillList = id; }; 
+            SUPERCLASS = FileReder; 
+        }, 
+        {CLASS = SkillFileWriter; LANGUAGE = Java; SUPERCLASS = FileWriter; }, 
+        {
+            ACTIONS = {
+                NewSkill = id; 
+                OKButton = id; 
+                Revert = id; 
+                addRequired = id; 
+                attribBonusSelection = id; 
+                populateRequiredSkillList = id; 
+                populateSkillInfo = id; 
+                populateSkillList = id; 
+                removeRequired = id; 
+                saveChange = id; 
+            }; 
+            CLASS = SkillWindowHandler; 
+            LANGUAGE = Java; 
+            OUTLETS = {
+                Categorie = id; 
+                Categories = id; 
+                Description = id; 
+                FormulatedBonusRadioBtn = id; 
+                IQBtn = id; 
+                KnowledAccess = id; 
+                Lable1Stat = id; 
+                Lable2Stat = id; 
+                MABtn = id; 
+                MEBtn = id; 
+                Name = id; 
+                PBBtn = id; 
+                PEBtn = id; 
+                PPBtn = id; 
+                PSBtn = id; 
+                SPDBtn = id; 
+                SkillList = id; 
+                StaticBonusField = id; 
+                StaticBonusRadiodBtn = id; 
+                addRequiredSkill = id; 
+                diceBonusField = id; 
+                diceMultiplierField = id; 
+                levelBonusField = id; 
+                levelStartField = id; 
+                nbrDiceFaceField = id; 
+                nbrDiceField = id; 
+                removeRequiredSkill = id; 
+                requiredList = id; 
+                requiresCategoriesList = id; 
+                requiresSkillList = id; 
+            }; 
+            SUPERCLASS = "java.lang.Object"; 
+        }, 
+        {CLASS = SpellFileReader; LANGUAGE = Java; SUPERCLASS = FileReder; }, 
+        {CLASS = SpellFileWriter; LANGUAGE = Java; SUPERCLASS = FileWriter; }, 
+        {CLASS = SpellSkilClass; LANGUAGE = Java; SUPERCLASS = Knowledge; }, 
+        {CLASS = SpySkillClass; LANGUAGE = Java; SUPERCLASS = Knowledge; }
+    ); 
+    IBVersion = 1; 
+}
